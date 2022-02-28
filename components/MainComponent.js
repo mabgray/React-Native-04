@@ -10,7 +10,7 @@ import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import Constants from 'expo-constants';
 import { Icon } from 'react-native-elements';
-import SafeAreaView from 'react-native-safe-area';
+import SafeAreaView from 'react-native-safe-area-view';
 
 const DirectoryNavigator = createStackNavigator(
 	{
