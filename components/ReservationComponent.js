@@ -11,7 +11,7 @@ class Reservation extends Component {
 			hikeIn: false,
 			date: new Date(),
 			showCalendar: false,
-			showModal
+			showModal: false
 		};
 	}
 

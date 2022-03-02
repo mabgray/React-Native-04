@@ -15,6 +15,35 @@ import { connect } from 'react-redux';
 import { fetchCampsites, fetchComments, fetchPromotions, fetchPartners } from '../redux/ActionCreators';
 import Reservation from './ReservationComponent';
 
+const styles = StyleSheet.create({
+	container: {
+		flex: 1
+	},
+	drawerHeader: {
+		backgroundColor: '#5637DD',
+		height: 140,
+		alignItems: 'center',
+		justifyContent: 'center',
+		flex: 1,
+		flexDirection: 'row'
+	},
+	drawerHeaderText: {
+		color: '#fff',
+		fontSize: 24,
+		fontWeight: 'bold'
+	},
+	drawerImage: {
+		margin: 10,
+		height: 60,
+		width: 60
+	},
+	stackIcon: {
+		marginLeft: 10,
+		color: '#fff',
+		fontSize: 24
+	}
+});
+
 const mapDispatchToProps = {
 	fetchCampsites,
 	fetchComments,
@@ -225,6 +254,7 @@ class Main extends Component {
 	}
 
 	render() {
+		console.log(styles);
 		return (
 			<View
 				style={{
@@ -237,34 +267,5 @@ class Main extends Component {
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1
-	},
-	drawerHeader: {
-		backgroundColor: '#5637DD',
-		height: 140,
-		alignItems: 'center',
-		justifyContent: 'center',
-		flex: 1,
-		flexDirection: 'row'
-	},
-	drawerHeaderText: {
-		color: '#fff',
-		fontSize: 24,
-		fontWeight: 'bold'
-	},
-	drawerImage: {
-		margin: 10,
-		height: 60,
-		width: 60
-	},
-	stackIcon: {
-		marginLeft: 10,
-		color: '#fff',
-		fontSize: 24
-	}
-});
 
 export default connect(null, mapDispatchToProps)(Main);
